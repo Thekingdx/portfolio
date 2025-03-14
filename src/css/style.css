@@ -1,0 +1,266 @@
+#copyright {
+  font-family: sans-serif;
+}
+#logo {
+  font-family: spincycle !important;
+}
+body {
+  font-family: elden ring;
+  background-color: #0a0a0a;
+  color: #d4c0a1;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", serif;
+}
+
+.elden-border {
+  border: 1px solid #9c8760;
+  box-shadow: 0 0 10px rgba(156, 135, 96, 0.3);
+}
+
+.elden-glow {
+  text-shadow: 0 0 5px #d4c0a1;
+}
+
+.project-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(222, 179, 86, 0.4);
+}
+
+.rune-bg {
+  background-image: url("/api/placeholder/1200/600");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+.section-fade {
+  position: relative;
+}
+
+.section-fade::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, #0a0a0a);
+}
+
+.skill-orb {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #332b1a, #1a150d);
+  transition: all 0.3s ease;
+}
+
+.skill-orb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(222, 179, 86, 0.6);
+}
+
+.fire-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.fire-animation::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 140, 0, 0.2) 0%,
+    rgba(255, 140, 0, 0) 70%
+  );
+  animation: fire-pulse 4s infinite;
+  pointer-events: none;
+}
+
+@keyframes fire-pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+
+.navbar-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #deb356;
+  transition: width 0.3s ease;
+}
+
+.navbar-item:hover::after {
+  width: 100%;
+}
+
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, #deb356, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.grace-site {
+  position: relative;
+}
+
+.grace-site::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(222, 179, 86, 0.15),
+    transparent 70%
+  );
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.rune-icon {
+  transition: all 0.3s ease;
+}
+
+.rune-icon:hover {
+  filter: brightness(1.5);
+  transform: rotate(10deg);
+}
+.elden-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.elden-button:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(222, 179, 86, 0.4) 0%,
+    rgba(222, 179, 86, 0) 70%
+  );
+  opacity: 0;
+  transform: scale(0.5);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.elden-button:hover:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.rune-bg {
+  position: relative;
+}
+
+.rune-bg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/api/placeholder/400/400") repeat;
+  background-size: 300px;
+  opacity: 0.03;
+  animation: backgroundScroll 30s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes backgroundScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 300px 300px;
+  }
+}
+body {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #deb356;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(222, 179, 86, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: 0.1s ease-out;
+}

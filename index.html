@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarnished Portfolio</title>
+  <script src="/src/js/5cedab7152.js"></script>
+  <script src="/src/js/ScrollTrigger.min.js"></script>
+  <script src="/src/js/gsap.min.js"></script>
+  <link rel="stylesheet" href="/src/css/output.css" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <style>
+    @font-face {
+      font-family: elden ring;
+      src: url(/asset/fonts/Mantinia-Regular.otf);
+    }
+
+    @font-face {
+      font-family: spincycle;
+      src: url(/asset/fonts/SPINC___.TTF);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading-screen" class="fixed inset-0 bg-black z-50 flex items-center justify-center">
+    <div class="grace-site"></div>
+    <div class="text-amber-300 text-2xl mt-16 elden-glow">LOADING...</div>
+  </div>
+  <div id="particles-container" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0"></div>
+  <nav
+    class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-sm elden-border border-t-0 border-x-0">
+    <div class="container mx-auto px-6 py-3">
+      <div class="flex items-center justify-between">
+        <div class="text-xl md:text-2xl font-bold text-amber-300">
+          <span class="cursor-pointer">TKDX</span>
+        </div>
+        <div class="hidden md:flex space-x-12 text-lg">
+          <a href="#home" class="navbar-item text-amber-100 hover:text-amber-300 transition duration-300">Home</a>
+          <a href="#about" class="navbar-item text-amber-100 hover:text-amber-300 transition duration-300">About</a>
+          <a href="#projects"
+            class="navbar-item text-amber-100 hover:text-amber-300 transition duration-300">Projects</a>
+          <a href="#skills" class="navbar-item text-amber-100 hover:text-amber-300 transition duration-300">Skills</a>
+          <a href="#contact" class="navbar-item text-amber-100 hover:text-amber-300 transition duration-300">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-amber-100 hover:text-amber-300 focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="flex flex-col space-y-4 py-4 px-6 bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-sm">
+        <a href="#home" class="text-amber-100 hover:text-amber-300">Home</a>
+        <a href="#about" class="text-amber-100 hover:text-amber-300">About</a>
+        <a href="#projects" class="text-amber-100 hover:text-amber-300">Projects</a>
+        <a href="#skills" class="text-amber-100 hover:text-amber-300">Skills</a>
+        <a href="#contact" class="text-amber-100 hover:text-amber-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <section id="home"
+    class="min-h-screen flex items-center justify-center relative overflow-hidden rune-bg bg-black bg-opacity-70">
+    <video autoplay loop muted class="absolute top-0 left-0 w-full h-full opacity-60 z-0 object-cover">
+      <source src="/asset/vid/Elden-Ring.mp4" type="video/mp4" />
+    </video>
+    <div class="grace-site absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
+    <div class="container mx-auto px-6 py-20 relative z-10 text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-amber-300 elden-glow tracking-wider">
+        <span class="block transform hover:scale-105 transition-transform duration-500">FAKHRI AHMAD DANISYWAR</span>
+      </h1>
+      <p class="text-xl md:text-2xl lg:text-3xl mb-10 text-amber-100 max-w-3xl mx-auto leading-relaxed">
+        <span class="inline-block px-2">Web Developer</span>•
+        <span class="inline-block px-2">Network Engineer</span>•
+        <span class="inline-block px-2">Gamer</span>
+      </p>
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+        <a href="#projects"
+          class="px-8 py-3 bg-amber-800 text-amber-100 rounded-sm elden-border hover:bg-amber-700 transition-all duration-300 transform hover:translate-y-1 text-lg">View
+          Projects</a>
+        <a href="#contact"
+          class="px-8 py-3 bg-transparent text-amber-300 rounded-sm elden-border border-amber-700 hover:bg-amber-900 hover:bg-opacity-30 transition-all duration-300 transform hover:translate-y-1 text-lg">Contact
+          Me</a>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about" class="text-amber-300 opacity-80 hover:opacity-100">
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </a>
+    </div>
+  </section>
+  <section id="about" class="py-20 relative bg-gradient-to-b from-gray-900 to-transparent">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <div class="relative">
+            <div class="w-64 h-64 md:w-80 md:h-80 mx-auto overflow-hidden rounded-full elden-border">
+              <img src="/asset/img/pfp.jpg" alt="Profile" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-amber-300 elden-glow">About me</h2>
+          <p class="text-amber-100 mb-6 text-lg leading-relaxed lowercase">I am a student from smk cybermedia majoring
+            in Computer network and telecommunication engineering with experience as a web developer.</p>
+          <div class="flex space-x-4">
+            <a href="https://github.com/Thekingdx" target="_blank"
+              class="rune-icon w-12 h-12 rounded-full bg-amber-900 bg-opacity-30 flex items-center justify-center elden-border">
+              <i class="fab fa-github text-amber-300 text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/fakhriad_/" target="_blank"
+              class="rune-icon w-12 h-12 rounded-full bg-amber-900 bg-opacity-30 flex items-center justify-center elden-border">
+              <i class="fab fa-instagram text-amber-300 text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="py-20 relative">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-amber-300 elden-glow">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="project-card bg-gray-900 bg-opacity-50 rounded-sm overflow-hidden elden-border transform hover:rotate-1">
+          <div class="relative overflow-hidden">
+            <img src="/asset/img/hsp.png" alt="Project 1"
+              class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-amber-200">HSP Questionnaire</h3>
+            <p class="text-amber-100 mb-4">A Questionnaire Website for new employees</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-xs bg-amber-900 bg-opacity-30 text-amber-200 rounded-sm">Bootstrap</span>
+              <span class="px-3 py-1 text-xs bg-amber-900 bg-opacity-30 text-amber-200 rounded-sm">Laravel</span>
+            </div>
+            <div class="flex justify-between">
+              <a href="https://github.com/NastroCoding/hsp-quiz" target="_blank"
+                class="text-amber-300 hover:text-amber-400 transition-colors">
+                <i class="fab fa-github mr-1"></i> Repository
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card bg-gray-900 bg-opacity-50 rounded-sm overflow-hidden elden-border transform hover:rotate-1">
+          <div class="relative overflow-hidden">
+            <img src="/asset/img/kelimatu.png" alt="Project 2"
+              class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-amber-200">Kelimatu Landing Page</h3>
+            <p class="text-amber-100 mb-4">A Landing Page for Kelimatu</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-xs bg-amber-900 bg-opacity-30 text-amber-200 rounded-sm">Tailwind</span>
+              <span class="px-3 py-1 text-xs bg-amber-900 bg-opacity-30 text-amber-200 rounded-sm">Laravel</span>
+            </div>
+            <div class="flex justify-between">
+              <a href="https://kelimatu.com/" target="_blank"
+                class="text-amber-300 hover:text-amber-400 transition-colors">
+                <i class="fas fa-link mr-1"></i> Website
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card bg-gray-900 bg-opacity-50 rounded-sm overflow-hidden elden-border transform hover:rotate-1">
+          <div class="relative overflow-hidden">
+            <img src="/asset/img/ptm.png" alt="Project 3"
+              class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-amber-200">PTM Kebangsaan Landing Page</h3>
+            <p class="text-amber-100 mb-4">Ping Pong pak Joko</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-xs bg-amber-900 bg-opacity-30 text-amber-200 rounded-sm">Bootstrap</span>
+              <span class="px-3 py-1 text-xs bg-amber-900 bg-opacity-30 text-amber-200 rounded-sm">Laravel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="py-20 bg-gradient-to-b relative">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-amber-300 elden-glow">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+        <div class="flex flex-col items-center">
+          <div class="skill-orb mb-4 elden-border">
+            <i class="fab fa-html5 text-3xl text-amber-300"></i>
+          </div>
+          <h3 class="text-lg font-bold text-amber-200">HTML5</h3>
+          <div class="w-full bg-gray-700 h-2 mt-2 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="skill-orb mb-4 elden-border">
+            <i class="fab fa-css3-alt text-3xl text-amber-300"></i>
+          </div>
+          <h3 class="text-lg font-bold text-amber-200">CSS3</h3>
+          <div class="w-full bg-gray-700 h-2 mt-2 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full rounded-full" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="skill-orb mb-4 elden-border">
+            <i class="fab fa-js text-3xl text-amber-300"></i>
+          </div>
+          <h3 class="text-lg font-bold text-amber-200">JavaScript</h3>
+          <div class="w-full bg-gray-700 h-2 mt-2 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="skill-orb mb-4 elden-border">
+            <i class="fab fa-react text-3xl text-amber-300"></i>
+          </div>
+          <h3 class="text-lg font-bold text-amber-200">React</h3>
+          <div class="w-full bg-gray-700 h-2 mt-2 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full rounded-full" style="width: 40%"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="skill-orb mb-4 elden-border">
+            <i class="fab fa-laravel text-3xl text-amber-300"></i>
+          </div>
+          <h3 class="text-lg font-bold text-amber-200">Laravel</h3>
+          <div class="w-full bg-gray-700 h-2 mt-2 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full rounded-full" style="width: 50%"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="skill-orb mb-4 elden-border">
+            <i class="fa-solid fa-network-wired text-3xl text-amber-300"></i>
+          </div>
+          <h3 class="text-lg font-bold text-amber-200">Cisco</h3>
+          <div class="w-full bg-gray-700 h-2 mt-2 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full rounded-full" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="skill-orb mb-4 elden-border">
+            <i class="fas fa-database text-3xl text-amber-300"></i>
+          </div>
+          <h3 class="text-lg font-bold text-amber-200">Databases</h3>
+          <div class="w-full bg-gray-700 h-2 mt-2 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full rounded-full" style="width: 50%"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="skill-orb mb-4 elden-border">
+            <i class="fas fa-mobile-alt text-3xl text-amber-300"></i>
+          </div>
+          <h3 class="text-lg font-bold text-amber-200">Responsive</h3>
+          <div class="w-full bg-gray-700 h-2 mt-2 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="py-20 relative">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-amber-300 elden-glow">Contact</h2>
+      <div class="max-w-4xl mx-auto bg-gray-900 bg-opacity-50 p-8 rounded-sm elden-border">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-amber-200">Send a Message</h3>
+            <form id="contact-form" action="https://formsubmit.co/fakhriad2007@gmail.com" class="space-y-5"
+              method="POST">
+              <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
+              <input type="hidden" name="_subject" value="New Contact Form Submission" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style="display: none" />
+              <div>
+                <label for="name" class="block mb-2 text-amber-100">Your Name</label>
+                <input type="text" id="name" name="name"
+                  class="w-full bg-gray-800 text-amber-100 border-none rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-amber-500 elden-border"
+                  placeholder="Enter your name" required />
+              </div>
+              <div>
+                <label for="email" class="block mb-2 text-amber-100">Your Email</label>
+                <input type="email" id="email" name="email"
+                  class="w-full bg-gray-800 text-amber-100 border-none rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-amber-500 elden-border"
+                  placeholder="Enter your email" required />
+              </div>
+              <div>
+                <label for="message" class="block mb-2 text-amber-100">Message</label>
+                <textarea id="message" rows="5" name="message"
+                  class="w-full bg-gray-800 text-amber-100 border-none rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-amber-500 elden-border"
+                  placeholder="Enter your message" required></textarea>
+              </div>
+              <div>
+                <button type="submit"
+                  class="w-full py-3 px-4 bg-amber-800 text-amber-100 rounded-sm hover:bg-amber-700 transition-colors elden-border">Send
+                  Message <i class="fas fa-paper-plane ml-2"></i></button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-amber-200">Contact Information</h3>
+            <p class="text-amber-100 mb-6">Feel free to reach out through any of these channels.</p>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-amber-900 bg-opacity-30 flex items-center justify-center mr-4 elden-border">
+                  <i class="fas fa-envelope text-amber-300"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm text-amber-200 font-semibold">Email</h4>
+                  <a href="mailto:fakhriad2007@gmail.com" target="_blank"
+                    class="text-amber-100 navbar-item transition duration-300">Fakhriad2007<span
+                      id="copyright">@</span>gmail.com</a>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-amber-900 bg-opacity-30 flex items-center justify-center mr-4 elden-border">
+                  <i class="fas fa-map-marker-alt text-amber-300"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm text-amber-200 font-semibold">Location</h4>
+                  <p class="text-amber-100">South Jakarta</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-amber-900 bg-opacity-30 flex items-center justify-center mr-4 elden-border">
+                  <i class="fas fa-phone text-amber-300"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm text-amber-200 font-semibold">Phone</h4>
+                  <p class="text-amber-100"><span id="copyright">+</span>62 813-6336-9443</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <h4 class="text-amber-200 font-semibold mb-4">Find Me On</h4>
+              <div class="flex space-x-4">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-amber-900 bg-opacity-30 flex items-center justify-center hover:bg-amber-800 transition-colors elden-border">
+                  <i class="fab fa-github text-amber-300"></i>
+                </a>
+                <a href="https://www.instagram.com/fakhriad_/" target="_blank"
+                  class="w-10 h-10 rounded-full bg-amber-900 bg-opacity-30 flex items-center justify-center hover:bg-amber-800 transition-colors elden-border">
+                  <i class="fab fa-instagram text-amber-300"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="py-8 bg-gray-900 border-t border-amber-900">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <div class="text-xl font-bold text-amber-300">TKDX</div>
+          <p class="text-amber-100 mt-2">pls play <a href="https://store.steampowered.com/app/1245620/ELDEN_RING/"
+              target="_blank" class="font-bold text-amber-300 elden-glow transition duration-300 navbar-item">Elden
+              Ring</a> it's peak</p>
+        </div>
+        <div class="flex flex-col items-center md:items-end">
+          <p class="text-amber-100 mb-2"><span id="copyright">&copy; </span>2025 <span id="logo">Thekingdx</span> All
+            rights reserved.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-amber-300 hover:text-amber-400 transition-colors"><i
+                class="fas fa-shield-alt"></i></a>
+            <a href="#" class="text-amber-300 hover:text-amber-400 transition-colors"><i class="fas fa-scroll"></i></a>
+            <a href="#" class="text-amber-300 hover:text-amber-400 transition-colors"><i
+                class="fas fa-hat-wizard"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button id="back-to-top"
+    class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-amber-800 text-amber-100 flex items-center justify-center opacity-0 transition-opacity duration-300 elden-border">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <script src="/src/js/script.js"></script>
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        mobileMenu.classList.add("hidden");
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+    const backToTopButton = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.opacity = "1";
+      } else {
+        backToTopButton.style.opacity = "0";
+      }
+    });
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+    function createParticles() {
+      const container = document.getElementById("particles-container");
+      for (let i = 0; i < 30; i++) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+        const size = Math.random() * 6 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        particle.style.left = `${posX}%`;
+        particle.style.top = `${posY}%`;
+        const delay = Math.random() * 5;
+        particle.style.animation = `float 15s infinite ease-in-out ${delay}s, fade 10s infinite ease-in-out ${delay}s`;
+        container.appendChild(particle);
+      }
+    }
+    const style = document.createElement("style");
+    style.textContent = `
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0) rotate(0); }
+      25% { transform: translateY(-30px) translateX(15px) rotate(5deg); }
+      50% { transform: translateY(-10px) translateX(-15px) rotate(10deg); }
+      75% { transform: translateY(-20px) translateX(10px) rotate(5deg); }
+      100% { transform: translateY(0) translateX(0) rotate(0); }
+    }
+    @keyframes fade {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 0.3; }
+    }
+  `;
+    document.head.appendChild(style);
+    createParticles();
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fadeIn");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    const style2 = document.createElement("style");
+    style2.textContent = `
+    .animate-fadeIn {
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animated-section {
+      opacity: 0;
+    }
+  `;
+    document.head.appendChild(style2);
+    document.querySelectorAll("section > .container").forEach((section) => {
+      section.classList.add("animated-section");
+      observer.observe(section);
+    });
+    document.querySelectorAll(".project-card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        const rune = document.createElement("div");
+        rune.classList.add("grace-site");
+        rune.style.position = "absolute";
+        rune.style.top = "50%";
+        rune.style.left = "50%";
+        rune.style.transform = "translate(-50%, -50%) scale(0.5)";
+        rune.style.pointerEvents = "none";
+        card.appendChild(rune);
+        setTimeout(() => {
+          rune.remove();
+        }, 2000);
+      });
+    });
+    const contactForm = document.getElementById("contact-form");
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitButton.innerHTML;
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitButton.disabled = true;
+      const formData = new FormData(contactForm);
+      fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            contactForm.innerHTML = `
+            <div class="text-center py-8">
+              <div class="w-16 h-16 mx-auto rounded-full bg-amber-800 flex items-center justify-center mb-4">
+                <i class="fas fa-check text-2xl text-amber-100"></i>
+              </div>
+              <h3 class="text-xl font-bold text-amber-200 mb-2">Message Sent Successfully!</h3>
+              <p class="text-amber-100 mb-6">Thank you for reaching out. I'll respond to your message soon.</p>
+              <button id="reset-form" class="px-6 py-2 bg-amber-900 text-amber-100 rounded-sm hover:bg-amber-800 transition-colors elden-border">Send Another Message</button>
+            </div>
+          `;
+            document.getElementById("reset-form").addEventListener("click", () => {
+              window.location.reload();
+            });
+          } else {
+            alert("There was a problem with your submission. Please try again.");
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+          }
+        })
+        .catch((error) => {
+          alert("There was a problem with your submission. Please try again.");
+          submitButton.innerHTML = originalText;
+          submitButton.disabled = false;
+        });
+    });
+  </script>
+</body>
+
+</html>
